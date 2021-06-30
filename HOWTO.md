@@ -8,3 +8,8 @@ have changed, or maybe if a feature was added/tweaked.
 Edit the code all you want; worst-case-scenario you can redownload the engine and reload your auto-backups. .SSD files are encrypted pieces of data that allow Sandsea to
 run properly. The version number, backup location, and similar data are all stored under .SSDs. While I think it's ok for you to edit other files for compatibility on your
 device, it's not recommended that you edit these files because it might break the engine. (quite possibly the backups too - say goodbye to your simulations.)
+### Sandsong Syntax  
+#### $ new <object, force, rule>
+Used to create a new item, be that an object, force, rule, or other simulation parameter.
+- `$ new object`
+  - `$ new object cuboid (<start coords>) (<end coords>) <material>` - Creates a new cuboid object in the simulation of the specified material (under the `material` parameter).
