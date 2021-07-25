@@ -11,5 +11,12 @@ print(" |  SANDSEA Simulation Engine v." + str(open("E:/sandsea/SANDSEA-se-1/SAN
 print(" | Command console open. If you need info on commands \n | and how to use them, you can check the HOWTO.md \n | file at the root!")
 print("_|_______________________________________________________\n")
 
+commandTypes = {
+    "$": "3-space simulation modification command",
+    "?": "query request",
+    "s": "setting modification"
+}
+
 while True:
     user = input("-")
+    print("Processing " + commandTypes[user.split(" ")[0]] + " ...")
