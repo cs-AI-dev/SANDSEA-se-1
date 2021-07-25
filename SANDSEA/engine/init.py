@@ -19,4 +19,8 @@ commandTypes = {
 
 while True:
     user = input("-")
-    print("Processing " + commandTypes[user.split(" ")[0]] + " ...")
+
+    if user.split(" ")[0] in commandTypes.keys():
+        print("Processing " + commandTypes[user.split(" ")[0]] + " ...")
+    else:
+        print("ERROR [ 1 ] ")
