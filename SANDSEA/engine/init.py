@@ -23,4 +23,4 @@ while True:
     if user.split(" ")[0] in commandTypes.keys():
         print("Processing " + commandTypes[user.split(" ")[0]] + " ...")
     else:
-        print("ERROR [ 1 ] ")
+        print('ERROR [ 1 ] "' + user.split(" ")[0] + '" is not a valid command type.')
