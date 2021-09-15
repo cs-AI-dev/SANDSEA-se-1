@@ -45,3 +45,7 @@ Note: When I talk about a coordinate parameter, you define that like this: `{ <x
   - `$ define effect darkMatter remove <name>` - Removes a dark matter effect from the simulation.
 
 ### Logic & Standard Programming
+
+#### Variables
+Variables are defined in Sandsong as follows.
+- `variable <name> = <value>` - Defines a variable with name as described under `name` as an integer, float number, string, or an instance of object. Can't define lists, sets, dictionaries or functions.
