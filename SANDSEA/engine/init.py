@@ -15,16 +15,16 @@
 import sys
 import os
 
-# Auto-compile working directory
-wdir = sys.argv[0].split("/SANDSEA/engine/init.py")[0]
-# Get the directory of this script, then remove the SANDSEA
-# extension directory from it to get the directory of the
-# Sandsea folder.
-
 def stringify(list):
    o = ""
    for x in list: o = o + x
    return o
+
+# Auto-compile working directory
+wdir = stringify(sys.argv[0].split("engine/")[0].split("init.py"))
+# Get the directory of this script, then remove the SANDSEA
+# extension directory from it to get the directory of the
+# Sandsea folder.
 
 def getSSD(ssdName):
    return open(wdir + str(ssdName) + ".ssd", "r").read()
@@ -39,15 +39,14 @@ def getSSLC(directory):
       if str(f).split(".")[2] == "post":
          exec(open(f, "r").read())
 
-print(f"SANDSEA Console v{getSSD("currentVersion")}\nType {'"help"'} for a list of commands, and type {'"q"'} to quit.")
+print(f"\nSANDSEA Console v{getSSD('currentVersion')}\nType 'help' for a list of commands, and type 'q' to quit.")
 while True:
    user = input(wdir + "SANDSEA>")
    cmd = user.split(" ")
-   cType = list(user)[0]
+   ctype = list(user)[0]
    if user == "q":
       print("Exiting ...")
       exit()
-   if cType = "@":
-      if stringify(list(cmd[1:-1]))) != "null":
+   if ctype == "@":
+      if stringify(list(cmd[1:-1])) != "null":
          getSSLC(stringify(list(cmd[1:-1])))
-      
