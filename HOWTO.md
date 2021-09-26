@@ -46,6 +46,8 @@ Note: When I talk about a coordinate parameter, you define that like this: `{ <x
 
 ### Logic & Standard Programming
 
+###
+
 #### Variables
 Variables are defined in Sandsong as follows.
 - `variable <name> = <value> ;` - Defines a variable with name as described under `name` as an integer, float number, string, or an instance of object. Can't define lists, sets, dictionaries or functions. The `=` is necessary.
@@ -59,27 +61,5 @@ Logic and Boolean values are assembled like this.
 - `{ <condition1> } and { <condition2> }` - Returns **True** if and only if both `condition1` and `condition2` return **True**, otherwise returns **False**.
 - `{ <condition1> } or { <condition2> }` - Returns **True** if either `condition1` or `condition2` return **True**.
 - `xor { <conditions> }` - Returns **True** if and only if exactly one of the conditions described under `conditions` returns **True**. Conditions should be separated by commas, so a `xor` statement with conditions `c1`, `c2`, and `c3` (the statement accepts any number of arguments) will be written as `xor { c1,c2,c3 }`.
-- `event occurred { <event> }` - Returns **True** if and only if an event described in `event` has occurred.
-> See the section on events for more.
-
-#### Conditionals
-Conditional codeblocks are defined like this.
-- `if { <conditions> } { <codeblock> }` - Executes code described in `codeblock` if and only if every condition in `conditions` returns **True**.
-- `while { <conditions> } { <codeblock> }` - Executes code until any condition described in `conditions` returns **False**. The special keywords `break` and `next` work in `while` loops.
-  - `break` - Breaks out of a `while` loop.
-  - `next` - Cancels the current iteration in a `while` loop and continues to the next.
-- `switch { <object> as <objectName> } <case1> { <codeblock1> } <case2> { <codeblock2> } ... ifNone { <codeblockN> }` - An iteration of the popular `switch` statement used in many languages, the `switch` takes the value of the single variable described under `object` and assignes it to a local variable with the name `objectName`. Then, it iterates down every `case` statement and checks if the logic statement described in that case statement returns **True**. If it does, it executes the associated codeblock. If none of the cases check out, it executes the codeblock associated with the reserved `ifNone` case.
-
-#### Input/Output
-Input and output in Sandsong is written like this.
-- `send <string>` - Prints a string described under `string` to the SANDSEA console.
-- `request <prompt>` - Prints the string described under `prompt` and then requests the user input data. If the input contains characters, then it is automatically returned as a string. Otherwise, it's returned as an integer or float.
-- `wipe line <lineNumber>` - Clears a line of text on the SANDSEA console.
-- `wipe char <charNumber> line <lineNumber>` - Clears a single character from a line on the SANDSEA console.
-- `wipe all` - Cleans off the SANDSEA console.
-
-#### Functions
-Functions are defined like this.
-- `function <functionName> { <args> } { <codeblocks> }` - Defines a function that takes arguments `args` (comma-separated names) and executes code described under `codeblocks` as `functionName`.
-- `return <x>` - When used in a function, that function (after being executed) will return `x` as its value.
-- `recurse <start> <finish>` - When used in a function, allows the function to recurse code from line `start` to line `finish` inside the function.
+- `event occurred { <event> }` - Returns **True** if and only if an event
+If, while, until, and
